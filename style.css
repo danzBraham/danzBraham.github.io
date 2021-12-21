@@ -1,0 +1,16 @@
+.jumbotron {
+    padding-top: 5rem;
+    background-color: hsl(217, 32%, 85%);
+}
+
+.projects {
+    background-color: hsl(217, 32%, 85%);
+}
+
+section {
+    padding-top: 5rem;
+}
+
+.bg-violet {
+    background-color: hsl(217, 32%, 25%);
+}
