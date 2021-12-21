@@ -34,6 +34,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                     <a class="nav-link" href="#about">About</a>
                     <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link" href="#certificate">Certificate</a>
                     <a class="nav-link" href="#contact">Contact</a>
                 </div>
             </div>
@@ -59,7 +60,7 @@
         <div class="container">
             <div class="row text-center mb-3">
                 <div class="col">
-                    <h2 class="judulAbout" data-aos="fade-down">About Me</h2>
+                    <h2 data-aos="fade-down">About Me</h2>
                 </div>
             </div>
             <div class="row justify-content-center fs-5 text-center">
@@ -90,12 +91,12 @@
         <div class="container">
             <div class="row text-center mb-3">
                 <div class="col">
-                    <h2 class="judulProjects" data-aos="fade-down">My Projects</h2>
+                    <h2 data-aos="fade-down">My Projects</h2>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-4 mb-3">
-                    <div class="card">
+                    <div class="card rounded-3">
                         <img src="img/projects/simple-website.png" class="card-img-top" alt="projects 1">
                         <div class="card-body">
                             <p class="card-text">Ini adalah website sederhana yang pertama kali saya buat</p>
@@ -115,12 +116,37 @@
     </section>
     <!-- Akhir Projects -->
 
+    <!-- Certificate -->
+    <section id="certificate" class="certificate">
+        <div class="container">
+            <div class="row text-center mb-3">
+                <div class="col">
+                    <h2 data-aos="fade-down">Certificate</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4 m-3 certi-img">
+                    <img src="img/certi/1.png" alt="Certi pertama" class="img-fluid border border-success border-4" />
+                </div>
+                <div class="col-md-4 m-3 certi-img">
+                    <img src="img/certi/2.png" alt="Certi kedua" class="img-fluid  border border-success border-4" />
+                </div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#cdd6e5" fill-opacity="1"
+                d="M0,128L60,144C120,160,240,192,360,192C480,192,600,160,720,170.7C840,181,960,235,1080,218.7C1200,203,1320,117,1380,74.7L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+    <!-- Akhir Certificate -->
+
     <!-- Contact -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="row text-center mb-3">
                 <div class="col">
-                    <h2 class="judulContact" data-aos="fade-down">Contact Me</h2>
+                    <h2 data-aos="fade-down">Contact Me</h2>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -165,6 +191,13 @@
     <script>
         const projects = document.querySelectorAll('.card');
         projects.forEach((img, i) => {
+            img.dataset.aos = "fade-down";
+            img.dataset.aosDuration = "1000";
+            img.dataset.aosDelay = i * 100;
+        });
+
+        const certi = document.querySelectorAll('.certi-img');
+        certi.forEach((img, i) => {
             img.dataset.aos = "fade-down";
             img.dataset.aosDuration = "1000";
             img.dataset.aosDelay = i * 100;

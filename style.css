@@ -14,3 +14,11 @@ section {
 .bg-violet {
     background-color: hsl(217, 32%, 25%);
 }
+
+.contact {
+    background-color: hsl(218, 32%, 85%);
+}
+
+.certificate img:nth-child(1) {
+    background-size: 120%;
+}
