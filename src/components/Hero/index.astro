@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import heroImage from "@assets/images/hero.png";
+import heroShape from "@assets/icons/hero-shape.svg";
+import Button from "@components/Button/index.astro";
+---
+
+<section
+  id="hero"
+  class="max-container min-h-fit w-full px-[26px] pb-[150px] pt-[112px] xl:px-[42px] xl:pt-[130px]"
+>
+  <div
+    class="flex items-center justify-between gap-[68px] max-md:flex-col md:gap-[42px]"
+  >
+    <div class="w-full max-w-sm lg:max-w-xl xl:max-w-3xl">
+      <h2 class="font-montserrat text-lg lg:text-xl">
+        Hi 👋 I’m <span class="font-bold text-accent">Zidan Abraham</span>.
+      </h2>
+      <h1 class="mb-[30px] mt-[10px] text-xl font-semibold lg:text-2xl">
+        Passionate full-stack developer eager to assist
+      </h1>
+      <Button href="/#projects" label="View Portfolio" icon="arrow-down" />
+    </div>
+    <div class="relative">
+      <Image
+        src={heroShape}
+        alt="hero shape"
+        class="absolute -left-[68px] -top-12 -z-10 blur-[42px]"
+      />
+      <div
+        class="relative z-20 flex w-fit items-center justify-center rounded-2xl bg-gradient-to-br from-secondary to-dark p-[3px]"
+      >
+        <Image src={heroImage} alt="hero image" class="rounded-2xl" />
+      </div>
+    </div>
+  </div>
+</section>
