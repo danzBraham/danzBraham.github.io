@@ -1,0 +1,25 @@
+---
+interface Props {
+  emoji?: string;
+  headline: string;
+  subheadline: string;
+}
+
+const { emoji, headline, subheadline } = Astro.props;
+---
+
+<div class="text-center">
+  <h2 class="z-[2] text-xl font-semibold xl:text-2xl">
+    {emoji}
+    <span class="relative z-[2]">
+      {headline}
+      <div
+        class="absolute -left-1 bottom-2 -z-[1] h-[20px] w-full -rotate-[0.7deg] bg-gradient-to-br from-secondary to-dark xl:-left-2 xl:bottom-3 xl:h-[26px]"
+      >
+      </div>
+    </span>
+  </h2>
+  <p class="mt-[10px] font-montserrat font-light xl:text-lg">
+    {subheadline}
+  </p>
+</div>

@@ -11,9 +11,55 @@
   }
 }
 
+@layer components {
+  @property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: -45deg;
+    inherits: false;
+  }
+
+  .card {
+    @apply relative;
+  }
+
+  .card::before,
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(var(--gradient-angle), #0f0920, #00c7a2);
+    animation: rotation 20s linear infinite;
+    transition: all 300ms ease-in-out;
+  }
+
+  .card:hover::before,
+  .card:hover::after {
+    background: linear-gradient(var(--gradient-angle), #0f0920, #7746de);
+  }
+
+  .card::after {
+    @apply blur-[6px] transition-[filter] duration-300 ease-in-out;
+  }
+
+  .card:hover::after {
+    @apply blur-[10px];
+  }
+
+  @keyframes rotation {
+    0% {
+      --gradient-angle: -45deg;
+    }
+    100% {
+      --gradient-angle: 315deg;
+    }
+  }
+}
+
 @layer utilities {
-  .max-container {
-    @apply m-auto max-w-screen-wide;
+  .container {
+    @apply m-auto min-h-fit w-full max-w-screen-wide px-[26px] xl:px-[42px];
   }
 
   .slide {
