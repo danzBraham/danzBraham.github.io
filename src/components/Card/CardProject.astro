@@ -1,0 +1,80 @@
+---
+import { Image } from "astro:assets";
+import { type ImageMetadata } from "astro";
+
+interface TechItem {
+  name: string;
+  icon: ImageMetadata;
+}
+
+interface Props {
+  img: ImageMetadata;
+  name: string;
+  description: string;
+  tech: TechItem[];
+  link: string;
+  label: string;
+}
+
+const { img, name, description, tech, link, label } = Astro.props;
+---
+
+<div
+  class="frame-purple flex w-full items-center justify-center gap-[26px] rounded-[26px] bg-dark/90 p-[16px] max-lg:flex-col md:p-[26px] lg:items-stretch lg:p-[42px]"
+>
+  <div class="aspect-[5/4] w-full rounded-2xl bg-accent">
+    <Image
+      src={img}
+      alt={name}
+      class="h-full w-full rounded-[inherit] object-cover"
+    />
+  </div>
+
+  <div class="flex w-full flex-col justify-between gap-[40px] md:gap-[50px]">
+    <div>
+      <h3 class="text-lg font-semibold capitalize md:text-xl">
+        {name}
+      </h3>
+      <p class="mt-[10px] font-montserrat text-sm md:text-base">
+        {description}
+      </p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold capitalize md:text-lg">
+        Featured technologies used
+      </h4>
+      <div class="mt-[10px] flex flex-wrap items-center gap-[10px]">
+        {
+          tech.map((t) => (
+            <div class="flex h-[60px] w-[60px] items-center justify-center rounded-[10px] bg-primary xl:h-[80px] xl:w-[80px]">
+              <Image src={t.icon} alt={t.name} class="h-[40px] xl:h-[50px]" />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <a
+      href={link}
+      target="_blank"
+      class="group flex w-full items-center justify-center gap-[6px] rounded-[42px] bg-accent px-[42px] py-[6px] text-dark backdrop-blur-lg transition-all duration-150 ease-in-out hover:bg-light/10 hover:text-light hover:ring-2 hover:ring-inset hover:ring-accent md:py-[10px]"
+    >
+      {label}
+      <svg
+        width="36"
+        height="36"
+        viewBox="0 0 36 36"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-[25px]"
+      >
+        <path
+          d="M9.97921 8.35775V11.2744H22.5063L8.52087 25.2598L10.5771 27.3161L24.5625 13.3307V25.8577H27.4792V8.35775H9.97921Z"
+          fill="currentColor"
+          class="bg-dark transition-all duration-150 ease-in-out group-hover:bg-light"
+        ></path>
+      </svg>
+    </a>
+  </div>
+</div>

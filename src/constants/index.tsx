@@ -1,3 +1,7 @@
+import reglowProject from "@assets/images/reglow-project.png";
+import astro from "@assets/icons/astro.svg";
+import react from "@assets/icons/react.svg";
+
 export const NAV_LINKS = [
   { key: "home", href: "/#", label: "Home" },
   { key: "expertise", href: "/#expertise", label: "Expertise" },
@@ -27,5 +31,21 @@ export const EXPERTISE = [
     subtitle: "Building robust foundations",
     description:
       "Architecting scalable server-side systems to power your web apps efficiently",
+  },
+];
+
+export const PROJECTS = [
+  {
+    img: reglowProject,
+    name: "Reglow Store Bali",
+    description: `Reglow Store Bali is a landing page designed for Reglow skincare agents
+        based in Bali. It features a sleek and modern design aimed at showcasing
+        the brand's products and benefits effectively.`,
+    tech: [
+      { name: "astro", icon: astro },
+      { name: "react", icon: react },
+    ],
+    link: "https://www.reglowstorebali.com/",
+    label: "reglowstorebali.com",
   },
 ];

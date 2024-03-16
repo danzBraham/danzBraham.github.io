@@ -1,0 +1,20 @@
+---
+import Heading from "@components/Heading/index.astro";
+import CardProject from "@components/Card/CardProject.astro";
+import { PROJECTS } from "@constants/index";
+---
+
+<section id="expertise" class="container py-[75px]">
+  <Heading
+    emoji="🚀"
+    headline="My Projects"
+    subheadline="Dive into my diverse portfolio of web creations"
+    position="left"
+  />
+
+  <div
+    class="mt-[68px] flex w-full flex-col items-center justify-center gap-[42px]"
+  >
+    {PROJECTS.map((project) => <CardProject {...project} />)}
+  </div>
+</section>

@@ -18,32 +18,61 @@
     inherits: false;
   }
 
-  .card {
+  .frame-green {
     @apply relative;
   }
 
-  .card::before,
-  .card::after {
+  .frame-green::before,
+  .frame-green::after {
     content: "";
     position: absolute;
     inset: -3px;
     z-index: -1;
     border-radius: inherit;
     background: linear-gradient(var(--gradient-angle), #0f0920, #00c7a2);
-    animation: rotation 20s linear infinite;
+    animation: rotation 5s linear infinite;
     transition: all 300ms ease-in-out;
   }
 
-  .card:hover::before,
-  .card:hover::after {
+  .frame-green:hover::before,
+  .frame-green:hover::after {
     background: linear-gradient(var(--gradient-angle), #0f0920, #7746de);
   }
 
-  .card::after {
+  .frame-green::after {
     @apply blur-[6px] transition-[filter] duration-300 ease-in-out;
   }
 
-  .card:hover::after {
+  .frame-green:hover::after {
+    @apply blur-[10px];
+  }
+
+  .frame-purple {
+    @apply relative;
+  }
+
+  .frame-purple::before,
+  .frame-purple::after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(var(--gradient-angle), #0f0920, #7746de);
+    animation: rotation 5s linear infinite;
+    transition: all 300ms ease-in-out;
+  }
+
+  .frame-purple:hover::before,
+  .frame-purple:hover::after {
+    background: linear-gradient(var(--gradient-angle), #0f0920, #f9f9f9);
+  }
+
+  .frame-purple::after {
+    @apply blur-[6px] transition-[filter] duration-300 ease-in-out;
+  }
+
+  .frame-purple:hover::after {
     @apply blur-[10px];
   }
 

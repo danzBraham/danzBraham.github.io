@@ -3,18 +3,19 @@ interface Props {
   emoji?: string;
   headline: string;
   subheadline: string;
+  position: "left" | "center" | "right";
 }
 
-const { emoji, headline, subheadline } = Astro.props;
+const { emoji, headline, subheadline, position = "center" } = Astro.props;
 ---
 
-<div class="text-center">
+<div class={`text-${position}`}>
   <h2 class="z-[2] text-xl font-semibold xl:text-2xl">
     {emoji}
-    <span class="relative z-[2]">
+    <span class="relative">
       {headline}
       <div
-        class="absolute -left-1 bottom-2 -z-[1] h-[20px] w-full -rotate-[0.7deg] bg-gradient-to-br from-secondary to-dark xl:-left-2 xl:bottom-3 xl:h-[26px]"
+        class="absolute -left-1 bottom-2 -z-[10] h-[20px] w-full -rotate-[0.7deg] bg-gradient-to-r from-secondary to-dark xl:-left-2 xl:bottom-3 xl:h-[26px]"
       >
       </div>
     </span>
