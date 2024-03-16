@@ -1,7 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import Heading from "@components/Heading/index.astro";
-import CardProject from "@components/Card/CardProject.astro";
+import projectsShape from "@assets/icons/projects-shape.svg";
 import { PROJECTS } from "@constants/index";
+import CardProject from "@components/Card/CardProject.astro";
 ---
 
 <section id="expertise" class="container py-[75px]">
@@ -13,8 +15,13 @@ import { PROJECTS } from "@constants/index";
   />
 
   <div
-    class="mt-[68px] flex w-full flex-col items-center justify-center gap-[42px]"
+    class="relative mt-[68px] flex w-full flex-col items-center justify-center gap-[42px]"
   >
+    <Image
+      src={projectsShape}
+      alt="projects shape"
+      class="absolute -right-[100px] -top-[100px] -z-10 blur-[42px] md:-right-[150px] md:-top-[150px]"
+    />
     {PROJECTS.map((project) => <CardProject {...project} />)}
   </div>
 </section>
