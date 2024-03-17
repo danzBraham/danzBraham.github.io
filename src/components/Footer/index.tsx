@@ -3,7 +3,7 @@ import { SOCIAL_MEDIA } from "@constants/index";
 const Footer = () => {
   return (
     <footer id="footer" className="bg-primary pb-[25px] pt-[75px]">
-      <div className="container flex w-full flex-col gap-[6px] md:gap-[10px]">
+      <div className="container flex w-full flex-col gap-[10px]">
         <div className="flex w-full items-center justify-between">
           <a href="/#" className="group">
             <svg
