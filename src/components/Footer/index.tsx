@@ -18,22 +18,22 @@ const Footer = () => {
                 <path
                   d="M0 23.0035H33.4333C35.6241 23.0035 37.4 24.7795 37.4 26.9702V31.5035H0V23.0035Z"
                   fill="currentColor"
-                  className="text-accent transition-all duration-150 ease-in-out group-hover:text-dark"
+                  className="text-accent"
                 ></path>
                 <path
                   d="M29.6 27.5369H68.1333V36.0369H33.5666C31.3759 36.0369 29.6 34.2609 29.6 32.0702V27.5369Z"
                   fill="currentColor"
-                  className="text-accent transition-all duration-150 ease-in-out group-hover:text-dark"
+                  className="text-accent"
                 ></path>
                 <path
                   d="M0 11.4936V0.336914H37.4V11.211L15.7023 40.0338L37.4 39.7512V51.3369H0V40.3164L21.6977 11.4936H0Z"
                   fill="currentColor"
-                  className="text-light"
+                  className="text-light transition-all duration-150 ease-in-out group-hover:text-dark"
                 ></path>
                 <path
                   d="M51.5365 0.336914L37 39.6554V51.3369H45.8359L48.9712 42.2196L58.6625 14.0129L68.3531 42.2196L71.4885 51.3369H84.6L66.0728 0.336914H51.5365Z"
                   fill="currentColor"
-                  className="text-light"
+                  className="text-light transition-all duration-150 ease-in-out group-hover:text-dark"
                 ></path>
               </g>
               <defs>
