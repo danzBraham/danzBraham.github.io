@@ -1,5 +1,5 @@
 import { type FC, useState, useEffect } from "react";
-import { NAV_LINKS } from "@constants/index";
+import { type NavLinks, NAV_LINKS } from "@constants/index";
 
 const Header: FC = () => {
   const [isActive, setisActive] = useState<boolean>(false);
@@ -68,7 +68,7 @@ const Header: FC = () => {
           <ul
             className={`flex w-full flex-col justify-between gap-[68px] font-montserrat text-lg xl:flex-row xl:text-base ${isActive && "text-secondary"}`}
           >
-            {NAV_LINKS.map(({ key, href, label }) => (
+            {NAV_LINKS.map(({ key, href, label }: NavLinks) => (
               <li key={key} onClick={handleClick}>
                 <a href={href} className="links py-[6px] xl:py-1">
                   {label}

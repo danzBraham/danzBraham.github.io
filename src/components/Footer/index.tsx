@@ -1,4 +1,4 @@
-import { SOCIAL_MEDIA } from "@constants/index";
+import { type SocialMedia, SOCIAL_MEDIA } from "@constants/index";
 
 const Footer = () => {
   return (
@@ -50,7 +50,7 @@ const Footer = () => {
             </svg>
           </a>
           <div className="flex items-center justify-end gap-[10px]">
-            {SOCIAL_MEDIA.map(({ key, link, icon }) => (
+            {SOCIAL_MEDIA.map(({ key, link, icon }: SocialMedia) => (
               <a
                 key={key}
                 title={key}

@@ -1,7 +1,7 @@
 ---
 import Heading from "@components/Heading/index.astro";
 import CardExpertise from "@components/Card/CardExpertise.tsx";
-import { EXPERTISE } from "@constants/index.ts";
+import { type Expertise, EXPERTISE } from "@constants/index";
 ---
 
 <section id="expertise" class="container py-[75px]">
@@ -15,6 +15,6 @@ import { EXPERTISE } from "@constants/index.ts";
   <div
     class="mt-[68px] flex w-full flex-wrap items-center justify-center gap-[42px] max-md:flex-col lg:justify-between"
   >
-    {EXPERTISE.map((exp) => <CardExpertise {...exp} />)}
+    {EXPERTISE.map((exp: Expertise) => <CardExpertise {...exp} />)}
   </div>
 </section>

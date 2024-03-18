@@ -3,7 +3,7 @@ import reglowProject from "@assets/images/reglow-project.png";
 import astro from "@assets/icons/astro.svg";
 import react from "@assets/icons/react.svg";
 
-interface NavLinks {
+export interface NavLinks {
   key: string;
   href: string;
   label: string;
@@ -17,7 +17,7 @@ export const NAV_LINKS: NavLinks[] = [
   { key: "contact-me", href: "/#contact-me", label: "Contact Me" },
 ];
 
-interface Expertise {
+export interface Expertise {
   title: string;
   subtitle: string;
   description: string;
@@ -95,7 +95,7 @@ export const EXPERTISE: Expertise[] = [
   },
 ];
 
-interface Project {
+export interface Project {
   img: ImageMetadata;
   name: string;
   description: string;
@@ -120,7 +120,7 @@ export const PROJECTS: Project[] = [
   },
 ];
 
-interface SocialMedia {
+export interface SocialMedia {
   key: string;
   link: string;
   icon: JSX.Element;

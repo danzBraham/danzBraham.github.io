@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import Heading from "@components/Heading/index.astro";
 import projectsShape from "@assets/icons/projects-shape.svg";
-import { PROJECTS } from "@constants/index";
+import { type Project, PROJECTS } from "@constants/index";
 import CardProject from "@components/Card/CardProject.astro";
 ---
 
@@ -23,6 +23,6 @@ import CardProject from "@components/Card/CardProject.astro";
       class="absolute -right-[100px] -top-[100px] -z-10 blur-[80px] md:-right-[150px] md:-top-[150px]"
       loading="eager"
     />
-    {PROJECTS.map((project) => <CardProject {...project} />)}
+    {PROJECTS.map((project: Project) => <CardProject {...project} />)}
   </div>
 </section>
