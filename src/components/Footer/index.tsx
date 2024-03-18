@@ -14,6 +14,7 @@ const Footer = () => {
               xmlns="http://www.w3.org/2000/svg"
               className="h-fit w-[50px] md:w-[60px] lg:w-[70px]"
             >
+              <title>Zidan Abraham</title>
               <g clipPath="url(#clip0_38_446)">
                 <path
                   d="M0 23.0035H33.4333C35.6241 23.0035 37.4 24.7795 37.4 26.9702V31.5035H0V23.0035Z"
@@ -52,6 +53,8 @@ const Footer = () => {
             {SOCIAL_MEDIA.map(({ key, link, icon }) => (
               <a
                 key={key}
+                title={key}
+                aria-label={key}
                 href={link}
                 target="_blank"
                 className="group flex h-[30px] w-[30px] items-center justify-center rounded-[10px] bg-accent transition-all duration-150 ease-in-out hover:bg-dark md:h-[35px] md:w-[35px] lg:h-[40px] lg:w-[40px]"

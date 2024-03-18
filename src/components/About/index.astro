@@ -10,7 +10,13 @@ import profileImage from "@assets/images/profile-image.png";
     <div
       class="frame-green group flex h-fit w-full max-w-[470px] items-center justify-center rounded-2xl"
     >
-      <Image src={profileImage} alt="my photo" class="rounded-[inherit]" />
+      <Image
+        src={profileImage}
+        alt="my candid profile"
+        class="rounded-[inherit]"
+        loading="eager"
+        quality="max"
+      />
       <svg
         width="433"
         height="464"

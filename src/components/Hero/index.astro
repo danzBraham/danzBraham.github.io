@@ -41,11 +41,18 @@ import heroShape from "@assets/icons/hero-shape.svg";
         src={heroShape}
         alt="hero shape"
         class="absolute -left-[100px] -top-12 -z-10 blur-[80px]"
+        loading="eager"
       />
       <div
-        class="frame-purple relative z-20 flex w-fit items-center justify-center rounded-2xl"
+        class="frame-purple flex w-fit items-center justify-center rounded-2xl"
       >
-        <Image src={heroImage} alt="hero image" class="rounded-2xl" />
+        <Image
+          src={heroImage}
+          alt="hero"
+          class="rounded-[inherit]"
+          loading="eager"
+          quality="max"
+        />
       </div>
     </div>
   </div>

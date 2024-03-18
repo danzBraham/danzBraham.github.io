@@ -27,6 +27,8 @@ const { img, name, description, tech, link, label } = Astro.props;
       src={img}
       alt={name}
       class="h-full w-full rounded-[inherit] object-cover"
+      loading="eager"
+      quality="max"
     />
   </div>
 
@@ -48,7 +50,12 @@ const { img, name, description, tech, link, label } = Astro.props;
         {
           tech.map((t) => (
             <div class="flex h-[60px] w-[60px] items-center justify-center rounded-[10px] bg-primary xl:h-[80px] xl:w-[80px]">
-              <Image src={t.icon} alt={t.name} class="h-[40px] xl:h-[50px]" />
+              <Image
+                src={t.icon}
+                alt={t.name}
+                class="h-[40px] xl:h-[50px]"
+                loading="eager"
+              />
             </div>
           ))
         }

@@ -27,6 +27,7 @@ const Header: FC = () => {
             xmlns="http://www.w3.org/2000/svg"
             className="group h-fit w-[60px] lg:w-[70px]"
           >
+            <title>Zidan Abraham</title>
             <g clipPath="url(#clip0_38_446)">
               <path
                 d="M0 23.0035H33.4333C35.6241 23.0035 37.4 24.7795 37.4 26.9702V31.5035H0V23.0035Z"

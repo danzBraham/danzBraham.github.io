@@ -21,6 +21,7 @@ import CardProject from "@components/Card/CardProject.astro";
       src={projectsShape}
       alt="projects shape"
       class="absolute -right-[100px] -top-[100px] -z-10 blur-[80px] md:-right-[150px] md:-top-[150px]"
+      loading="eager"
     />
     {PROJECTS.map((project) => <CardProject {...project} />)}
   </div>
