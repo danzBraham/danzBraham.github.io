@@ -1,8 +1,15 @@
+import { type ImageMetadata } from "astro";
 import reglowProject from "@assets/images/reglow-project.png";
 import astro from "@assets/icons/astro.svg";
 import react from "@assets/icons/react.svg";
 
-export const NAV_LINKS = [
+interface NavLinks {
+  key: string;
+  href: string;
+  label: string;
+}
+
+export const NAV_LINKS: NavLinks[] = [
   { key: "home", href: "/#", label: "Home" },
   { key: "expertise", href: "/#expertise", label: "Expertise" },
   { key: "projects", href: "/#projects", label: "Projects" },
@@ -10,7 +17,14 @@ export const NAV_LINKS = [
   { key: "contact-me", href: "/#contact-me", label: "Contact Me" },
 ];
 
-export const EXPERTISE = [
+interface Expertise {
+  title: string;
+  subtitle: string;
+  description: string;
+  icon: JSX.Element;
+}
+
+export const EXPERTISE: Expertise[] = [
   {
     title: "Web Design",
     subtitle: "Crafting visually stunning",
@@ -81,7 +95,16 @@ export const EXPERTISE = [
   },
 ];
 
-export const PROJECTS = [
+interface Project {
+  img: ImageMetadata;
+  name: string;
+  description: string;
+  tech: { name: string; icon: ImageMetadata }[];
+  link: string;
+  label: string;
+}
+
+export const PROJECTS: Project[] = [
   {
     img: reglowProject,
     name: "Reglow Store Bali",
@@ -97,7 +120,13 @@ export const PROJECTS = [
   },
 ];
 
-export const SOCIAL_MEDIA = [
+interface SocialMedia {
+  key: string;
+  link: string;
+  icon: JSX.Element;
+}
+
+export const SOCIAL_MEDIA: SocialMedia[] = [
   {
     key: "instagram",
     link: "https://www.instagram.com/brahamz_/",
