@@ -26,6 +26,8 @@ const { img, name, description, tech, link, label } = Astro.props;
     <Image
       src={img}
       alt={name}
+      widths={[400, 600, 700, 1000, 600, 700]}
+      sizes={`(max-width: 475px) 400px, (max-width: 640px) 600px, (max-width: 768px) 700px, (max-width: 1023px) 1000px, (max-width: 1280px) 600px, 700px`}
       class="h-full w-full rounded-[inherit] object-cover"
       loading="eager"
       quality="max"
