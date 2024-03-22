@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import heroImage from "@assets/images/hero.png";
 import heroShape from "@assets/icons/hero-shape.svg";
+
+console.log(heroImage.width);
 ---
 
 <section id="hero" class="container pb-[75px] pt-[112px] xl:pt-[130px]">
@@ -49,8 +51,8 @@ import heroShape from "@assets/icons/hero-shape.svg";
         <Image
           src={heroImage}
           alt="hero"
-          widths={[325, 425, 500, 360, heroImage.width]}
-          sizes={`(max-width: 375px) 325px, (max-width: 475px) 425px, (max-width: 768px) 500px, (max-width: 1024px) 360px, ${heroImage.width}px`}
+          widths={[350, 450, 500, 400, heroImage.width]}
+          sizes={`(max-width: 375px) 350px, (max-width: 475px) 450px, (max-width: 767px) 500px, (max-width: 1024px) 400px, ${heroImage.width}px`}
           class="rounded-[inherit]"
           loading="eager"
           quality="max"
