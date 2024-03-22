@@ -2,6 +2,7 @@ import { type ImageMetadata } from "astro";
 import reglowProject from "@assets/images/reglow-project.png";
 import astro from "@assets/icons/astro.svg";
 import react from "@assets/icons/react.svg";
+import tailwind from "@assets/icons/tailwind.svg";
 
 export interface NavLinks {
   key: string;
@@ -114,6 +115,7 @@ export const PROJECTS: Project[] = [
     tech: [
       { name: "astro", icon: astro },
       { name: "react", icon: react },
+      { name: "tailwindcss", icon: tailwind },
     ],
     link: "https://www.reglowstorebali.com/",
     label: "reglowstorebali.com",
