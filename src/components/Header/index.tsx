@@ -15,9 +15,9 @@ const Header: FC = () => {
 
   return (
     <header
-      className={`fixed z-50 w-full ${isActive ? "min-h-full bg-light" : "rounded-b-2xl bg-dark/10 backdrop-blur-lg"}`}
+      className={`fixed z-50 w-full ${isActive ? "min-h-full bg-light" : "rounded-b-2xl bg-dark/10 shadow-sm backdrop-blur-lg"}`}
     >
-      <nav className="max-container flex items-center justify-between px-[26px] py-4 xl:px-[42px]">
+      <nav className="max-container flex items-center justify-between px-[26px] py-[16px] xl:px-[42px] xl:py-[10px]">
         <a href="/#">
           <svg
             width="85"
