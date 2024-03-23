@@ -1,1 +1,20 @@
-<h1>The Page Does Not Exist</h1>
+---
+import "@styles/global.css";
+---
+
+<main
+  class="flex min-h-screen w-full items-center justify-center bg-gradient-to-br from-primary to-dark"
+>
+  <div class="h-fit w-fit text-center">
+    <p class="font-montserrat text-lg font-medium text-accent">404</p>
+    <h1 class="text-2xl font-semibold">Page not found</h1>
+    <p class="mt-2.5 font-montserrat">
+      Sorry, could not find the page you are looking for.
+    </p>
+    <a
+      href="/"
+      class="py-6px mx-auto mt-[30px] flex w-fit items-center justify-center rounded-[42px] bg-accent px-[42px] text-dark backdrop-blur-lg transition-all duration-150 ease-in-out hover:bg-light/10 hover:text-light hover:ring-2 hover:ring-inset hover:ring-accent md:py-[10px]"
+      >Go back home</a
+    >
+  </div>
+</main>
