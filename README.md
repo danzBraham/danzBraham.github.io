@@ -2,8 +2,10 @@
 
 This repository contains the source code for my portfolio website.
 
-## Tech I use
+## Technologies Used
 
-![Astro](./src/assets/icons/astro.svg) &nbsp; ![React](./src/assets/icons/react.svg) &nbsp; ![Tailwind](./src/assets/icons/tailwind.svg)
+[<img alt="Static Badge" src="https://img.shields.io/badge/astro-astro?style=for-the-badge&logo=astro&color=black">](https://astro.build/)
+[<img alt="Static Badge" src="https://img.shields.io/badge/react-react?style=for-the-badge&logo=react&color=gray">](https://react.dev/)
+[<img alt="Static Badge" src="https://img.shields.io/badge/tailwind-tailwind?style=for-the-badge&logo=tailwindcss&color=black">](https://tailwindcss.com/)
 
 Visit my portfolio website: [https://danzbraham.github.io/](https://danzbraham.github.io/ "Portfolio Website")
