@@ -1,20 +1,26 @@
 ---
-import "@styles/global.css";
+import Layout from "@layouts/Layout.astro";
 ---
 
-<main
-  class="flex min-h-screen w-full items-center justify-center bg-gradient-to-br from-primary to-dark"
+<Layout
+  title="Page Not Found | Zidan Abraham | Full-stack Developer"
+  description="Passionate full-stack developer crafting compelling digital experiences for businesses & individuals. Specializing in web design & development."
+  keywords="Zidan Abraham, Zidan Abraham Website, Full-stack developer, Web design, Front-end development, Back-end development, Digital experiences, Website development, Portfolio, Coding, Programming, Responsive design."
 >
-  <div class="h-fit w-fit text-center">
-    <p class="font-montserrat text-lg font-medium text-accent">404</p>
-    <h1 class="text-2xl font-semibold">Page not found</h1>
-    <p class="mt-2.5 font-montserrat">
-      Sorry, could not find the page you are looking for.
-    </p>
-    <a
-      href="/"
-      class="py-6px mx-auto mt-[30px] flex w-fit items-center justify-center rounded-[42px] bg-accent px-[42px] text-dark backdrop-blur-lg transition-all duration-150 ease-in-out hover:bg-light/10 hover:text-light hover:ring-2 hover:ring-inset hover:ring-accent md:py-[10px]"
-      >Go back home</a
-    >
-  </div>
-</main>
+  <main
+    class="flex min-h-screen w-full items-center justify-center bg-gradient-to-b from-dark to-primary"
+  >
+    <div class="h-fit w-fit text-center">
+      <p class="font-montserrat text-lg font-medium text-accent">404</p>
+      <h1 class="text-xl font-semibold md:text-2xl">Page not found</h1>
+      <p class="mt-2.5 font-montserrat text-sm md:text-base">
+        Sorry, could not find the page you are looking for.
+      </p>
+      <a
+        href="/"
+        class="mx-auto mt-[20px] flex w-fit items-center justify-center rounded-[42px] bg-accent px-[42px] py-[10px] text-sm text-dark backdrop-blur-lg transition-all duration-150 ease-in-out hover:bg-light/10 hover:text-light hover:ring-2 hover:ring-inset hover:ring-accent md:text-base"
+        >Go back home</a
+      >
+    </div>
+  </main>
+</Layout>

@@ -2,7 +2,7 @@ import { type SocialMedia, SOCIAL_MEDIA } from "@constants/index";
 
 const Footer = () => {
   return (
-    <footer id="footer" className="bg-primary pb-[25px] pt-[75px]">
+    <footer id="footer" className="bg-primary py-[25px]">
       <div className="container flex w-full flex-col gap-[10px]">
         <div className="flex w-full items-center justify-between">
           <a href="/#" className="group">
