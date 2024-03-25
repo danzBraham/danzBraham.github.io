@@ -20,10 +20,15 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.11.1
       - name: Install, build, and upload your site
         uses: withastro/action@v2
         with:
-          path: . # The root location of your Astro project inside the repository. (optional)
+          path: .
+          package-manager: pnpm@latest
 
   deploy:
     needs: build
