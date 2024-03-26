@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://danzbraham.github.io/sitemap-index.xml
