@@ -24,11 +24,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20.11.1
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
       - name: Install, build, and upload your site
         uses: withastro/action@v2
         with:
           path: .
-          package-manager: pnpm@latest
 
   deploy:
     needs: build
