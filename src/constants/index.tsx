@@ -1,8 +1,13 @@
 import { type ImageMetadata } from "astro";
+
 import reglowProject from "@assets/images/reglow-project.png";
+import busanaetnikProject from "@assets/images/busanaetnik-project.png";
+
 import astro from "@assets/icons/astro.svg";
 import react from "@assets/icons/react.svg";
 import tailwind from "@assets/icons/tailwind.svg";
+import nextjs from "@assets/icons/nextjs.svg";
+import strapi from "@assets/icons/strapi.svg";
 
 export interface NavLinks {
   key: string;
@@ -96,6 +101,18 @@ export const EXPERTISE: Expertise[] = [
   },
 ];
 
+const TECHNOLOGIES = {
+  astro: { name: "astro", icon: astro, website: "https://astro.build/" },
+  react: { name: "react", icon: react, website: "https://react.dev/" },
+  tailwindcss: {
+    name: "tailwindcss",
+    icon: tailwind,
+    website: "https://tailwindcss.com/",
+  },
+  nextjs: { name: "nextjs", icon: nextjs, website: "https://nextjs.org/" },
+  strapi: { name: "strapi", icon: strapi, website: "https://strapi.io/" },
+};
+
 export interface Project {
   img: ImageMetadata;
   name: string;
@@ -112,17 +129,22 @@ export const PROJECTS: Project[] = [
     description: `Reglow Store Bali is a landing page designed for Reglow skincare agents
         based in Bali. It features a sleek and modern design aimed at showcasing
         the brand's products and benefits effectively.`,
-    tech: [
-      { name: "astro", icon: astro, website: "https://astro.build/" },
-      { name: "react", icon: react, website: "https://react.dev/" },
-      {
-        name: "tailwindcss",
-        icon: tailwind,
-        website: "https://tailwindcss.com/",
-      },
-    ],
+    tech: [TECHNOLOGIES.astro, TECHNOLOGIES.react, TECHNOLOGIES.tailwindcss],
     link: "https://www.reglowstorebali.com/",
     label: "reglowstorebali.com",
+  },
+  {
+    img: busanaetnikProject,
+    name: "Busana Etnik Nusantara",
+    description: `Semi e-commerce platform that showcases the beauty of Balinese culture through stunning, high-quality traditional clothing. It allows users to explore the rich traditions of Bali while offering a convenient way to purchase these unique pieces.`,
+    tech: [
+      TECHNOLOGIES.nextjs,
+      TECHNOLOGIES.react,
+      TECHNOLOGIES.tailwindcss,
+      TECHNOLOGIES.strapi,
+    ],
+    link: "https://busanaetniknusantara.com/",
+    label: "busanaetniknusantara.com",
   },
 ];
 
