@@ -2,16 +2,15 @@
 import { Image } from "astro:assets";
 import { type ImageMetadata } from "astro";
 
-interface TechItem {
-  name: string;
-  icon: ImageMetadata;
-}
-
 interface Props {
   img: ImageMetadata;
   name: string;
   description: string;
-  tech: TechItem[];
+  tech: {
+    name: string;
+    icon: ImageMetadata;
+    website: string;
+  }[];
   link: string;
   label: string;
 }
@@ -39,7 +38,7 @@ const { img, name, description, tech, link, label } = Astro.props;
       <h3 class="text-lg font-semibold capitalize md:text-xl">
         {name}
       </h3>
-      <p class="mt-[10px] font-montserrat text-sm md:text-base">
+      <p class="mt-[16px] max-w-xl font-montserrat text-sm md:text-base">
         {description}
       </p>
     </div>
@@ -51,14 +50,28 @@ const { img, name, description, tech, link, label } = Astro.props;
       <div class="mt-[10px] flex flex-wrap items-center gap-[10px]">
         {
           tech.map((t) => (
-            <div class="flex h-[60px] w-[60px] items-center justify-center rounded-[10px] bg-primary xl:h-[80px] xl:w-[80px]">
-              <Image
-                src={t.icon}
-                alt={t.name}
-                class="h-[40px] xl:h-[50px]"
-                loading="eager"
-              />
-            </div>
+            <a
+              title={t.name}
+              href={t.website}
+              target="_blank"
+              class="flex h-[60px] w-[60px] items-center justify-center rounded-[10px] bg-primary transition-all duration-150 ease-in-out hover:bg-dark hover:ring-2 hover:ring-inset hover:ring-primary xl:h-[70px] xl:w-[70px]"
+            >
+              {t.name === "tailwindcss" ? (
+                <Image
+                  src={t.icon}
+                  alt={t.name}
+                  class="w-[35px] xl:w-[40px]"
+                  loading="eager"
+                />
+              ) : (
+                <Image
+                  src={t.icon}
+                  alt={t.name}
+                  class="h-[35px] xl:h-[40px]"
+                  loading="eager"
+                />
+              )}
+            </a>
           ))
         }
       </div>

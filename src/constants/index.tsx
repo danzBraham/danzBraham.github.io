@@ -100,7 +100,7 @@ export interface Project {
   img: ImageMetadata;
   name: string;
   description: string;
-  tech: { name: string; icon: ImageMetadata }[];
+  tech: { name: string; icon: ImageMetadata; website: string }[];
   link: string;
   label: string;
 }
@@ -113,9 +113,13 @@ export const PROJECTS: Project[] = [
         based in Bali. It features a sleek and modern design aimed at showcasing
         the brand's products and benefits effectively.`,
     tech: [
-      { name: "astro", icon: astro },
-      { name: "react", icon: react },
-      { name: "tailwindcss", icon: tailwind },
+      { name: "astro", icon: astro, website: "https://astro.build/" },
+      { name: "react", icon: react, website: "https://react.dev/" },
+      {
+        name: "tailwindcss",
+        icon: tailwind,
+        website: "https://tailwindcss.com/",
+      },
     ],
     link: "https://www.reglowstorebali.com/",
     label: "reglowstorebali.com",
