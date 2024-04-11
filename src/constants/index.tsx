@@ -119,7 +119,6 @@ export interface Project {
   description: string;
   tech: { name: string; icon: ImageMetadata; website: string }[];
   link: string;
-  label: string;
 }
 
 export const PROJECTS: Project[] = [
@@ -131,7 +130,6 @@ export const PROJECTS: Project[] = [
         the brand's products and benefits effectively.`,
     tech: [TECHNOLOGIES.astro, TECHNOLOGIES.react, TECHNOLOGIES.tailwindcss],
     link: "https://www.reglowstorebali.com/",
-    label: "reglowstorebali.com",
   },
   {
     img: busanaetnikProject,
@@ -144,7 +142,6 @@ export const PROJECTS: Project[] = [
       TECHNOLOGIES.strapi,
     ],
     link: "https://busanaetniknusantara.com/",
-    label: "busanaetniknusantara.com",
   },
 ];
 

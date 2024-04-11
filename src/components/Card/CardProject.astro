@@ -12,10 +12,9 @@ interface Props {
     website: string;
   }[];
   link: string;
-  label: string;
 }
 
-const { img, name, description, tech, link, label } = Astro.props;
+const { img, name, description, tech, link } = Astro.props;
 ---
 
 <div
@@ -80,9 +79,9 @@ const { img, name, description, tech, link, label } = Astro.props;
     <a
       href={link}
       target="_blank"
-      class="group flex w-full items-center justify-center gap-[6px] rounded-[42px] bg-accent px-[42px] py-[6px] text-dark backdrop-blur-lg transition-all duration-150 ease-in-out hover:bg-light/10 hover:text-light hover:ring-2 hover:ring-inset hover:ring-accent md:py-[10px]"
+      class="group flex w-full items-center justify-center gap-[4px] rounded-[42px] bg-accent px-[42px] py-[6px] font-medium text-dark backdrop-blur-lg transition-all duration-150 ease-in-out hover:bg-light/10 hover:text-light hover:ring-2 hover:ring-inset hover:ring-accent md:py-[10px]"
     >
-      {label}
+      Visit the website
       <svg
         width="36"
         height="36"
