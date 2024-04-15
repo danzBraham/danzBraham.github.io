@@ -10,7 +10,7 @@ const { emoji, headline, subheadline, position = "center" } = Astro.props;
 ---
 
 <div class={`text-${position}`}>
-  <h2 class="z-[2] text-xl font-semibold xl:text-2xl">
+  <h2 class="md:text-6xl lg:text-9xl text-4xl z-[2] font-semibold">
     {emoji}
     <span class="relative">
       {headline}
@@ -20,7 +20,7 @@ const { emoji, headline, subheadline, position = "center" } = Astro.props;
       </div>
     </span>
   </h2>
-  <p class="mt-[10px] font-montserrat font-light xl:text-lg">
+  <p class="mt-2 font-montserrat font-light lg:mt-4 lg:text-lg">
     {subheadline}
   </p>
 </div>

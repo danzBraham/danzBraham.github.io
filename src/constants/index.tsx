@@ -25,7 +25,6 @@ export const NAV_LINKS: NavLinks[] = [
 
 export interface Expertise {
   title: string;
-  subtitle: string;
   description: string;
   icon: JSX.Element;
 }
@@ -33,9 +32,8 @@ export interface Expertise {
 export const EXPERTISE: Expertise[] = [
   {
     title: "Web Design",
-    subtitle: "Crafting visually stunning",
     description:
-      "From wireframes to user interfaces, I specialize in creating captivating designs that engage and inspire",
+      "From wireframes to launch, I craft user-centric interfaces that captivate, engage, and inspire",
     icon: (
       <svg
         width="35"
@@ -54,9 +52,8 @@ export const EXPERTISE: Expertise[] = [
   },
   {
     title: "Front-End",
-    subtitle: "Bringing designs to life",
     description:
-      "Empowering designs with Next.js, Astro, and React for seamless user experiences across all devices",
+      "Building responsive, user-friendly websites using modern front-end frameworks and Jamstack for optimal performance",
     icon: (
       <svg
         width="35"
@@ -75,9 +72,8 @@ export const EXPERTISE: Expertise[] = [
   },
   {
     title: "Back-End",
-    subtitle: "Building robust foundations",
     description:
-      "Architecting scalable server-side systems to power your web apps efficiently",
+      "Building powerful backends that empower dynamic apps with seamless functionality and secure data management",
     icon: (
       <svg
         width="35"
