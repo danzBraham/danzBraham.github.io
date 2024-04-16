@@ -4,7 +4,7 @@ import CardExpertise from "@components/Card/CardExpertise.tsx";
 import { type Expertise, EXPERTISE } from "@constants/index";
 ---
 
-<section id="expertise" class="container py-[75px]">
+<section id="expertise" class="container py-16">
   <Heading
     emoji="💪"
     headline="My Expertise"
@@ -13,7 +13,7 @@ import { type Expertise, EXPERTISE } from "@constants/index";
   />
 
   <div
-    class="mt-16 flex w-full flex-wrap items-center justify-center gap-[42px] max-md:flex-col lg:justify-between"
+    class="mt-12 flex w-full flex-wrap items-center justify-center gap-[42px] max-md:flex-col lg:justify-between"
   >
     {EXPERTISE.map((exp: Expertise) => <CardExpertise {...exp} />)}
   </div>
