@@ -49,7 +49,7 @@ const Footer = () => {
               </defs>
             </svg>
           </a>
-          <div className="flex items-center justify-end gap-2 md:gap-3">
+          <div className="flex items-center justify-end gap-2.5 md:gap-3">
             {SOCIAL_MEDIA.map(({ key, link, icon }: SocialMedia) => (
               <a
                 key={key}
