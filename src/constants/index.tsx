@@ -158,7 +158,7 @@ export const SOCIAL_MEDIA: SocialMedia[] = [
         viewBox="0 0 26 26"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="max-lg:h-[23px] max-md:h-[20px]"
+        className="h-[22px] lg:h-[26px]"
       >
         <g clipPath="url(#clip0_83_77)">
           <path

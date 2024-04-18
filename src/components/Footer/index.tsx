@@ -2,8 +2,8 @@ import { type SocialMedia, SOCIAL_MEDIA } from "@constants/index";
 
 const Footer = () => {
   return (
-    <footer id="footer" className="bg-primary py-[25px]">
-      <div className="container flex w-full flex-col gap-[10px]">
+    <footer id="footer" className="bg-primary py-6">
+      <div className="container flex w-full flex-col gap-2">
         <div className="flex w-full items-center justify-between">
           <a href="/#" className="group">
             <svg
@@ -49,7 +49,7 @@ const Footer = () => {
               </defs>
             </svg>
           </a>
-          <div className="flex items-center justify-end gap-[10px]">
+          <div className="flex items-center justify-end gap-2 md:gap-3">
             {SOCIAL_MEDIA.map(({ key, link, icon }: SocialMedia) => (
               <a
                 key={key}
@@ -57,7 +57,7 @@ const Footer = () => {
                 aria-label={key}
                 href={link}
                 target="_blank"
-                className="group flex h-[30px] w-[30px] items-center justify-center rounded-[10px] bg-accent transition-all duration-150 ease-in-out hover:bg-dark md:h-[35px] md:w-[35px] lg:h-[40px] lg:w-[40px]"
+                className="group flex h-9 w-9 items-center justify-center rounded-xl bg-accent transition-all duration-150 ease-in-out hover:bg-dark md:h-9 md:w-9 lg:h-10 lg:w-10"
               >
                 {icon}
               </a>
@@ -65,7 +65,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="h-[3px] w-full rounded-full bg-dark"></div>
-        <div className="flex w-full items-center justify-between text-center font-montserrat text-xs font-light max-md:flex-col md:text-sm">
+        <div className="flex w-full items-center justify-between text-center font-montserrat text-sm font-light max-md:flex-col md:text-[14px] xl:text-base">
           <p>&copy; 2024 All rights reserved</p>
           <p>Designed with Figma & crafted using Astro by Zidan Abraham</p>
         </div>
